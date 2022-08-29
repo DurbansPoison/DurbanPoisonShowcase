@@ -1,5 +1,5 @@
 export const lightTheme = {
-  background: 'LightSlateGray',
+  background: '#e1e0e5',
   color: '#121212',
   accentColor: '#778899',
   chronoTheme: {

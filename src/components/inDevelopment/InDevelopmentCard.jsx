@@ -34,7 +34,7 @@ const styles = {
   },
 };
 
-const InDevelopmentCard = (props) => {
+function InDevelopmentCard(props) {
   const theme = useContext(ThemeContext);
   const parseBodyText = (text) => <ReactMarkdown children={text} />;
 
@@ -88,7 +88,7 @@ const InDevelopmentCard = (props) => {
       </Card>
     </Col>
   );
-};
+}
 
 InDevelopmentCard.propTypes = {
   inDevelopment: PropTypes.shape({

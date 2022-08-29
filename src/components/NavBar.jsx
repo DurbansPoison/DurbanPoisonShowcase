@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import React, { useEffect, useState, useContext } from 'react';
-import { withRouter } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { Routes, useInRouterContext } from 'react-router';
+import { Link } from 'react-router-dom';
 import styled, { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
 import ThemeToggler from './ThemeToggler';
@@ -13,7 +14,7 @@ const styles = {
   },
 };
 
-const ExternalNavLink = styled.a`
+const ExternalLink = styled.a`
   color: ${(props) => props.theme.navbarTheme.linkColor};
   &:hover {
     color: ${(props) => props.theme.navbarTheme.linkHoverColor};
@@ -23,7 +24,7 @@ const ExternalNavLink = styled.a`
   }
 `;
 
-const InternalNavLink = styled(NavLink)`
+const InternalLink = styled(Link)`
   color: ${(props) => props.theme.navbarTheme.linkColor};
   &:hover {
     color: ${(props) => props.theme.navbarTheme.linkHoverColor};
@@ -36,7 +37,7 @@ const InternalNavLink = styled(NavLink)`
   }
 `;
 
-const NavBar = () => {
+function NavBar() {
   const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
   const [expanded, setExpanded] = useState(false);
@@ -83,7 +84,7 @@ const NavBar = () => {
           <Nav>
             {data
               && data.sections?.map((section, index) => (section?.type === 'link' ? (
-                <ExternalNavLink
+                <ExternalLink
                   key={section.title}
                   href={section.href}
                   target="_blank"
@@ -93,9 +94,9 @@ const NavBar = () => {
                   theme={theme}
                 >
                   {section.title}
-                </ExternalNavLink>
+                </ExternalLink>
               ) : (
-                <InternalNavLink
+                <InternalLink
                   key={section.title}
                   onClick={() => setExpanded(false)}
                   exact={index === 0}
@@ -105,7 +106,7 @@ const NavBar = () => {
                   theme={theme}
                 >
                   {section.title}
-                </InternalNavLink>
+                </InternalLink>
               )))}
           </Nav>
           <ThemeToggler
@@ -115,7 +116,7 @@ const NavBar = () => {
       </Container>
     </Navbar>
   );
-};
+}
 
-const NavBarWithRouter = withRouter(NavBar);
+const NavBarWithRouter = useInRouterContext(NavBar);
 export default NavBarWithRouter;
