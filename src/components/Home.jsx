@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Fade from 'react-reveal';
 import endpoints from '../constants/endpoints';
-
 import FallbackSpinner from './FallbackSpinner';
 
 const styles = {

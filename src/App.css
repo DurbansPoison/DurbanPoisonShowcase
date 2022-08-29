@@ -53,6 +53,7 @@
 }
 
 .main {
+	padding-top: 70px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -132,7 +133,7 @@ section.timeline-card-content div.card-description > p {
   .navbar__link--active::after {
     width: 0;
   }
-  
+
   .navbar__link--active:hover::after {
     width: 0;
   }
@@ -145,6 +146,6 @@ section.timeline-card-content div.card-description > p {
 .header {
   font-size: 3em;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 

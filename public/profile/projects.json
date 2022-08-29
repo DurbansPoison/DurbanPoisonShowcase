@@ -83,8 +83,7 @@
 					"text": "Defcad",
 					"href": "https://defcad.com/library/397396dc-d85d-4582-82e9-0e6f2f889998/"
 				}
-			],
-			"tags": ["TypeScript", "Angular 12", "JavaScript"]
+			]
 		},
 		{
 			"image": "https://media.defcad.com/entityimages/a851c12104914b0c9c26ae7397643215.jpg",
@@ -111,7 +110,13 @@
 		{
 			"image": "https://media.defcad.com/entityimages/c57830c1c35d49caafa788e5b7f52025.jpg",
 			"title": "Durbans-Cyber-Stop",
-			"bodyText": "a aesthetically pleasing hand stop"
+			"bodyText": "a aesthetically pleasing hand stop",
+			"links": [
+				{
+				"text":"Defcad",
+				"href": "https://defcad.com/library/22040aec-afe0-40ef-bae2-5a0ac1178ab9/"
+				}
+			]
 		}
 	]
 }
