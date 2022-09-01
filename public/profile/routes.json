@@ -6,11 +6,6 @@
             "headerTitle": "About"
         },
         {
-            "component": "Skills",
-            "path": "/skills",
-            "headerTitle": "Skills"
-        },
-        {
             "component": "Projects",
             "path": "/projects",
             "headerTitle": "Projects"
@@ -19,6 +14,11 @@
 			"component": "InDevelopment",
 			"path": "/inDevelopment",
 			"headerTitle": "In Development"
+		},
+		{
+			"component": "AdditionalLinks",
+			"path": "/additionalLinks",
+			"headerTitle": "AdditionalLinks"
 		}
     ]
 }

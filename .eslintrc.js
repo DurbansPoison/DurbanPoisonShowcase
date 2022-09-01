@@ -1,11 +1,12 @@
-module.exports = {
+module.exports = { // eslint-disable-line no-undef
   env: {
     browser: true,
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
-    'airbnb',
+		"eslint:recommended",
+    "plugin:react/recommended",
+		"plugin:react/jsx-runtime"
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -16,10 +17,15 @@ module.exports = {
   },
   plugins: [
     'react',
+
+
   ],
   rules: {
+		"react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     'prefer-template': 0,
     'react/no-children-prop': [0],
-    'linebreak-style': 0
+    'linebreak-style': 0,
   },
+	root: true,
 };

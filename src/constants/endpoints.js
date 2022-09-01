@@ -5,6 +5,7 @@ const endpoints = {
   about: 'profile/about.json',
   projects: 'profile/projects.json',
   inDevelopment: 'profile/inDevelopment.json',
+  additionalLinks: 'profile/additionalLinks.json',
 };
 
 export default endpoints;

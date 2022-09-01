@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
 /* eslint-disable react/forbid-prop-types */
 import React, { useContext } from 'react';
@@ -6,7 +9,6 @@ import {
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
-import ReactMarkdown from 'react-markdown';
 
 const styles = {
   badgeStyle: {
@@ -35,11 +37,9 @@ const styles = {
   },
 };
 
-const InDevelopmentCard = (props) => {
+const AdditionLinksCard = (props) => {
   const theme = useContext(ThemeContext);
-  const parseBodyText = (text) => <ReactMarkdown children={text} />;
-
-  const { inDevelopment } = props;
+  const { additionalLinksCard } = props;
 
   return (
     <Col>
@@ -51,16 +51,13 @@ const InDevelopmentCard = (props) => {
         }}
         text={theme.bsSecondaryVariant}
       >
-        <Card.Img variant="top" src={inDevelopment?.image} />
+        <Card.Img variant="top" src={additionalLinks?.image} />
         <Card.Body>
-          <Card.Title style={styles.cardTitleStyle}>{inDevelopment.title}</Card.Title>
-          <Card.Text style={styles.cardTextStyle}>
-            {parseBodyText(inDevelopment.bodyText)}
-          </Card.Text>
+          <Card.Title style={styles.cardTitleStyle}>{additionalLinks.title}</Card.Title>
         </Card.Body>
 
         <Card.Body>
-          {inDevelopment?.links?.map((link) => (
+          {additionalLinks?.links?.map((link) => (
             <Button
               key={link.href}
               style={styles.buttonStyle}
@@ -71,9 +68,9 @@ const InDevelopmentCard = (props) => {
             </Button>
           ))}
         </Card.Body>
-        {inDevelopment.tags && (
+        {additionalLinks.tags && (
           <Card.Footer style={{ backgroundColor: theme.cardFooterBackground }}>
-            {inDevelopment.tags.map((tag) => (
+            {additionalLinks.tags.map((link) => (
               <Badge
                 key={tag}
                 pill
@@ -91,14 +88,13 @@ const InDevelopmentCard = (props) => {
   );
 };
 
-InDevelopmentCard.propTypes = {
-  inDevelopment: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    bodyText: PropTypes.string.isRequired,
+additionalLinksCard.propTypes = {
+  additionalLinks: PropTypes.shape({
+		header: PropTypes.shape({
+    title: PropTypes.string,
     image: PropTypes.string,
-    links: PropTypes.arrayOf(PropTypes.object),
-    tags: PropTypes.arrayOf(PropTypes.string),
+    links: PropTypes.string,
   }).isRequired,
+})
 };
-
-export default InDevelopmentCard;
+export default AdditionalLinksCard;
