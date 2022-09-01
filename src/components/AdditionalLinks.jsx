@@ -70,8 +70,5 @@ const AdditionalLinks = (props) => {
 
 AdditionalLinks.propTypes = {
 	header: PropTypes.string.isRequired,
-	links: PropsTyles.string.isRequired,
-	title: PropTypes.string.isRequired,
-	image: PropTypes.string.isRequired,
-}.isRequired();
+}
 export default AdditionalLinks;

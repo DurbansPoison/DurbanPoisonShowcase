@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 // @ts-nocheck
+//@ts-ignore .
 /* eslint-disable react/forbid-prop-types */
 import React, { useContext } from 'react';
 import {
@@ -72,13 +73,13 @@ const AdditionLinksCard = (props) => {
           <Card.Footer style={{ backgroundColor: theme.cardFooterBackground }}>
             {additionalLinks.tags.map((link) => (
               <Badge
-                key={tag}
+                key={image}
                 pill
                 bg={theme.bsSecondaryVariant}
                 text={theme.bsPrimaryVariant}
                 style={styles.badgeStyle}
               >
-                {tag}
+                {title}
               </Badge>
             ))}
           </Card.Footer>
@@ -91,9 +92,9 @@ const AdditionLinksCard = (props) => {
 additionalLinksCard.propTypes = {
   additionalLinks: PropTypes.shape({
 		header: PropTypes.shape({
-    title: PropTypes.string,
-    image: PropTypes.string,
-    links: PropTypes.string,
+			title: PropTypes.string.isRequired,
+			image: PropTypes.string,
+			links: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 })
 };
