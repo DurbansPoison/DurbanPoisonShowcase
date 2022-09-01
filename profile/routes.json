@@ -1,0 +1,24 @@
+{
+    "sections": [
+        {
+            "component": "About",
+            "path": "/about",
+            "headerTitle": "About"
+        },
+        {
+            "component": "Projects",
+            "path": "/projects",
+            "headerTitle": "Projects"
+        },
+		{
+			"component": "InDevelopment",
+			"path": "/inDevelopment",
+			"headerTitle": "In Development"
+		},
+		{
+			"component": "AdditionalLinks",
+			"path": "/additionalLinks",
+			"headerTitle": "AdditionalLinks"
+		}
+    ]
+}
