@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_app=self.webpackChunkportfolio_app||[]).push([[161],{9161:function(i,a,e){e.r(a);e(2791);var s=e(2007),r=e.n(s);e(184);additionalLinksCard.propTypes={additionalLinks:r().shape({header:r().shape({title:r().string.isRequired,image:r().string,links:r().arrayOf(r().object)}).isRequired})},a.default=AdditionalLinksCard}}]);
+//# sourceMappingURL=161.b0ccdd03.chunk.js.map
