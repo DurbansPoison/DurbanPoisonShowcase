@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
-import AdditionalLinksCard from './additionalLinks/AdditionalLinksCard';
+import AdditionalLinksCard from './AdditionalLinks/AdditionalLinksCard';
 import FallbackSpinner from './FallbackSpinner';
 
 const styles = {
@@ -66,9 +66,10 @@ const AdditionalLinks = (props) => {
 			)}
 		</>
 	);
-};
-
-AdditionalLinks.propTypes = {
-	header: PropTypes.string.isRequired,
 }
+AdditionalLinksCard.propTypes = {
+	additionalLinks:{	
+		header: PropTypes.string.isRequired,
+	}
+};
 export default AdditionalLinks;

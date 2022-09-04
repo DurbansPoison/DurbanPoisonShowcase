@@ -4,6 +4,18 @@ import FallbackSpinner from './components/FallbackSpinner';
 import NavBarWithRouter from './components/NavBar';
 import Home from './components/Home';
 import endpoints from './constants/endpoints';
+// include and initialize the rollbar library with your access token
+import Rollbar  from "rollbar";
+
+
+const rollbar = new Rollbar({
+  accessToken: 'c18c2bddc5e64216a5ed328452a15c42',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+// record a generic message and send it to Rollbar
+rollbar.log("DurbansPoison");
 
 function MainApp() {
   const [data, setData] = useState(null);

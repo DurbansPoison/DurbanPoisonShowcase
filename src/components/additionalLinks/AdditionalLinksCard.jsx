@@ -1,15 +1,14 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-// @ts-nocheck
-//@ts-ignore .
-/* eslint-disable react/forbid-prop-types */
+
 import React, { useContext } from 'react';
 import {
   Button, Card, Badge, Col,
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
+
 
 const styles = {
   badgeStyle: {
@@ -26,9 +25,6 @@ const styles = {
     fontSize: 24,
     fontWeight: 700,
   },
-  cardTextStyle: {
-    textAlign: 'left',
-  },
   linkStyle: {
     textDecoration: 'none',
     padding: 10,
@@ -38,7 +34,7 @@ const styles = {
   },
 };
 
-const AdditionLinksCard = (props) => {
+const additionLinksCard = (props) => {
   const theme = useContext(ThemeContext);
   const { additionalLinksCard } = props;
 
@@ -69,9 +65,9 @@ const AdditionLinksCard = (props) => {
             </Button>
           ))}
         </Card.Body>
-        {additionalLinks.tags && (
+        {AdditionalLinks.tags && (
           <Card.Footer style={{ backgroundColor: theme.cardFooterBackground }}>
-            {additionalLinks.tags.map((link) => (
+            {AdditionalLinks.tags.map((link) => (
               <Badge
                 key={image}
                 pill
@@ -89,8 +85,8 @@ const AdditionLinksCard = (props) => {
   );
 };
 
-additionalLinksCard.propTypes = {
-  additionalLinks: PropTypes.shape({
+AdditionalLinksCard.propTypes = {
+  AdditionalLinks: PropTypes.shape({
 		header: PropTypes.shape({
 			title: PropTypes.string.isRequired,
 			image: PropTypes.string,

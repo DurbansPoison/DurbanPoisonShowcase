@@ -1,5 +1,10 @@
 {
     "sections": [
+		{
+			"component": "Home",
+			"path": "/home",
+			"headerTitle": "Home"
+		},
         {
             "component": "About",
             "path": "/about",
@@ -17,7 +22,7 @@
 		},
 		{
 			"component": "AdditionalLinks",
-			"path": "/additionalLinks",
+			"path": "/AdditionalLinks",
 			"headerTitle": "Additional Links"
 		}
     ]

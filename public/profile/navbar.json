@@ -1,8 +1,8 @@
 {
     "logo" : {
         "source": "images/logo.png",
-        "height" : 100,
-        "width" : 85
+        "height" : 120,
+        "width" : 95
     },
     "sections": [
         {
@@ -23,7 +23,7 @@
 		},
 		{
 			"title": "Additional Links",
-			"href": "/additionalLinks"
+			"href": "/AdditionalLinks"
 		}
     ]
 
