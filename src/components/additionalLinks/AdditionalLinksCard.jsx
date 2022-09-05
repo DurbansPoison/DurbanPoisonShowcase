@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
@@ -8,6 +9,7 @@ import {
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
+import AdditionalLinks from '../AdditionalLinks';
 
 
 const styles = {
@@ -34,9 +36,9 @@ const styles = {
   },
 };
 
-const additionLinksCard = (props) => {
+const AdditionLinksCard = (props ) => {
   const theme = useContext(ThemeContext);
-  const { additionalLinksCard } = props;
+  const { AdditionalLinks } = props;
 
   return (
     <Col>
@@ -48,13 +50,13 @@ const additionLinksCard = (props) => {
         }}
         text={theme.bsSecondaryVariant}
       >
-        <Card.Img variant="top" src={additionalLinks?.image} />
+        <Card.Img variant="top" src={AdditionalLinksCard?.image} />
         <Card.Body>
-          <Card.Title style={styles.cardTitleStyle}>{additionalLinks.title}</Card.Title>
+          <Card.Title style={styles.cardTitleStyle}>{AdditionalLinksCard.title}</Card.Title>
         </Card.Body>
 
         <Card.Body>
-          {additionalLinks?.links?.map((link) => (
+          {AdditionalLinksCard?.links?.map((link) => (
             <Button
               key={link.href}
               style={styles.buttonStyle}
@@ -65,17 +67,17 @@ const additionLinksCard = (props) => {
             </Button>
           ))}
         </Card.Body>
-        {AdditionalLinks.tags && (
+        {AdditionalLinksCard.tags && (
           <Card.Footer style={{ backgroundColor: theme.cardFooterBackground }}>
-            {AdditionalLinks.tags.map((link) => (
+            {AdditionalLinksCard.tags.map((link) => (
               <Badge
-                key={image}
+                key={image.AdditionalLinks}
                 pill
                 bg={theme.bsSecondaryVariant}
                 text={theme.bsPrimaryVariant}
                 style={styles.badgeStyle}
               >
-                {title}
+                {title.AdditionalLinks}
               </Badge>
             ))}
           </Card.Footer>
@@ -89,7 +91,7 @@ AdditionalLinksCard.propTypes = {
   AdditionalLinks: PropTypes.shape({
 		header: PropTypes.shape({
 			title: PropTypes.string.isRequired,
-			image: PropTypes.string,
+			img: PropTypes.string,
 			links: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 })

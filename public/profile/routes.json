@@ -22,7 +22,7 @@
 		},
 		{
 			"component": "AdditionalLinks",
-			"path": "/AdditionalLinks",
+			"path": "/additionalLinks",
 			"headerTitle": "Additional Links"
 		}
     ]

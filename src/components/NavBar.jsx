@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import React, { useEffect, useState, useContext } from 'react';
 import { withRouter } from 'react-router';

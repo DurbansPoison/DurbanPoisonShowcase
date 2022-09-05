@@ -1,5 +1,7 @@
-/* eslint-disable no-undef */
-/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+// @ts-nocheck
+//@eslint-disable
+
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
 import { ThemeContext } from 'styled-components';
@@ -9,6 +11,7 @@ import Header from './Header';
 import endpoints from '../constants/endpoints';
 import AdditionalLinksCard from './AdditionalLinks/AdditionalLinksCard';
 import FallbackSpinner from './FallbackSpinner';
+
 
 const styles = {
 	containerStyle: {
@@ -20,12 +23,12 @@ const styles = {
 };
 const AdditionalLinks = (props) => {
 	const theme = useContext(ThemeContext);
-	const { header } = props;
+	const { header } = AdditionalLinksCard.props;
 	const [data, setData] = useState(null);
 	const [showMore, setShowMore] = useState(false);
 
 	useEffect(() => {
-		fetch(endpoints.additionalLinks, {
+		fetch(endpoints.AdditionalLinks, {
 			method: 'GET',
 		})
 			.then((res) => res.json())
@@ -42,11 +45,11 @@ const AdditionalLinks = (props) => {
 						<Row xs={1} sm={1} md={2} lg={3} className='g-4'>
 							{data.additionalLinks
 								?.slice(0, numberOfItems)
-								.map(additionalLinks)}{' '}
+								.map(AdditionalLinks)}{' '}
 							=
 							{
-								<Fade key={additionalLinks.title}>
-									<AdditionalLinksCard AdditionalLinks={additionalLinks} />
+								<Fade key={AdditionalLinks.title}>
+									<AdditionalLinksCard AdditionalLinks={AdditionalLinks} />
 								</Fade>
 							}
 						</Row>
@@ -67,9 +70,9 @@ const AdditionalLinks = (props) => {
 		</>
 	);
 }
-AdditionalLinksCard.propTypes = {
-	additionalLinks:{	
+// @ts-ignore
+AdditionalLinks.propTypes = {
+
 		header: PropTypes.string.isRequired,
-	}
 };
 export default AdditionalLinks;

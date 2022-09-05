@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable react/forbid-prop-types */
 import React, { useContext } from 'react';
 import {
@@ -53,7 +54,9 @@ const ProjectCard = (props) => {
         <Card.Img variant="top" src={project?.image} />
         <Card.Body>
           <Card.Title style={styles.cardTitleStyle}>{project.title}</Card.Title>
-          <Card.Text style={styles.cardTextStyle}>
+          <Card.Text
+// @ts-ignore
+          style={styles.cardTextStyle}>
             {parseBodyText(project.bodyText)}
           </Card.Text>
         </Card.Body>
